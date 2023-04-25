@@ -22,3 +22,28 @@ p {
 .white-text {
   color: white;
 }
+
+/* 
+1. POSITION
+li {
+  color: red;
+  color: blue; <- THIS GONNA BE THE COLOR
+}
+
+2. SPECIFICITY
+li {color: blue;}
+.first-class {color: red;}
+li[draggable] {color: purple;}
+#first-id {color: orange;} <- THIS GONNA BE THE COLOR
+
+3. TYPE
+<link rel="stylesheet" href="./style.css" > (EKSTERNAL CSS)
+<style></style> (INTERNAL CSS)
+<h1 style=" ">Hello</h1> (INLINE CSS) <- THIS GONNA BE EXECUTED
+
+4. IMPORTANCE
+li {
+  color: red;
+  color: green !importance; <- THIS GONNA BE THE COLOR
+}
+*/
