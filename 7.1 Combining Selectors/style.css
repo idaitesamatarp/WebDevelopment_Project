@@ -1,0 +1,26 @@
+/* Write your code here: */
+
+/* GROUP = Apply to both selectors. */
+h1, h2 {
+    color: blueviolet;
+}
+
+/* CHILD = Apply to direct child of the left side. */
+.box > p { /* .box is parent, p is child */
+    color: firebrick;
+}
+
+/* DESCENDANT = Apply to a descendant of the left side. */
+.box li { /* .box is ancestor, li is descendant */
+    color: blue;
+}
+
+/* CHAINING = Apply where ALL selectors are true */
+li.done { /* For specific element styling */
+    color: seagreen;
+}
+
+/* COMBINING COMBINERS = Combining some of combiners. */
+ul p.done { /* ul is ancestor, p.done is chaining */
+    font-size: 0.5rem;
+}
