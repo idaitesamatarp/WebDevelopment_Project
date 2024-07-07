@@ -1,0 +1,23 @@
+{
+  "name": "blog_capstoneproject",
+  "version": "1.0.0",
+  "description": "capstone project make a blog web application",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "nodejs",
+    "expressjs",
+    "ejs"
+  ],
+  "author": "Idaites Amatarp",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
+}

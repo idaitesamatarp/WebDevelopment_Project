@@ -1,0 +1,72 @@
+<%- include("partials/header.ejs") %>
+<div
+  class="d-flex justify-content-center align-items-center"
+  style="height: 100vh"
+>
+  <div class="container">
+    <div class="row">
+      <%- include("partials/sidebar.ejs") %>
+      <div class="col-9">
+        <div class="card border-primary" style="height: 493px">
+          <div class="card-header text-bg-dark">
+            <div class="d-flex justify-content-between">
+              <div>
+                <h5 class="card-title">Your Post in <%= postsMonth %></h5>
+              </div>
+              <div>
+                <button
+                  class="btn btn-light"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#addPostModal"
+                >
+                  <i class="bi bi-plus-circle me-1"></i> Add Post
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card-body" style="overflow-y: auto">
+            <form action="/post/store/<%= postsMonth %>" method="POST">
+              <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="title"
+                  placeholder="Enter your title"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="subtitle" class="form-label">Subtitle</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="subtitle"
+                  placeholder="Enter your subtitle"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="content" class="form-label">Content</label>
+                <textarea
+                  name="content"
+                  class="form-control"
+                  placeholder="Enter your content"
+                  rows="5"
+                  autocomplete="off"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-success w-100">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

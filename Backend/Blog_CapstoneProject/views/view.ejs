@@ -1,0 +1,69 @@
+<%- include("partials/header.ejs") %>
+<div
+  class="d-flex justify-content-center align-items-center"
+  style="height: 100vh"
+>
+  <div class="container">
+    <div class="row">
+      <%- include("partials/sidebar.ejs") %>
+      <div class="col-9">
+        <div class="card border-primary" style="height: 493px">
+          <div class="card-header text-bg-dark">
+            <div class="d-flex justify-content-between">
+              <div>
+                <h5 class="card-title">Your Post in <%= postsMonth %></h5>
+              </div>
+              <div>
+                <a class="btn btn-light" href="/post/create/<%= postsMonth %>">
+                  <i class="bi bi-plus-circle me-1"></i> Add Post
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="card-body" style="overflow-y: auto">
+            <% if (data.length != 0) { %> <% for( let i = 0; i < data.length;
+            i++ ) { %>
+            <div class="card mb-3">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <h5 class="card-title"><%= data[i].title %></h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">
+                      <%= data[i].subtitle %>
+                    </h6>
+                  </div>
+                  <div>
+                    <a
+                      href="/posts/<%= data[i].month %>/edit/<%= i %>"
+                      class="btn btn-sm btn-outline-dark"
+                      data-bs-toggle="modal"
+                      data-bs-target="#addPostModal"
+                      ><i class="bi bi-pencil-square me-1"></i> Edit
+                    </a>
+                  </div>
+                </div>
+                <p class="card-text">
+                  <% if (activePath == 'view') { %> <%= data[i].content %> <% }
+                  else { %> <%= data[i].content.length > 600 ?
+                  data[i].content.slice(0,600)+' ... ' : data[i].content %>
+                  <a
+                    href="<%= data[i].month %>/view/<%= i %>"
+                    class="link-offset-2"
+                  >
+                    See More
+                  </a>
+                  <% } %>
+                </p>
+              </div>
+            </div>
+            <% } %> <% } else { %>
+            <div class="alert alert-danger text-center" role="alert">
+              You don't have any posts.
+            </div>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

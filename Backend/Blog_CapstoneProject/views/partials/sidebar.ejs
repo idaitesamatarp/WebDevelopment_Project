@@ -1,0 +1,12 @@
+<div class="col-3">
+  <div class="list-group">
+    <% month.forEach(menu => { %>
+    <a href="/post/<%= menu %>" class="list-group-item list-group-item-action list-group-item-dark d-flex justify-content-between align-items-center fw-bold <%= postsMonth == menu ? "active" : "" %>">
+      <%= menu %>
+      <span class="badge rounded-pill <%= postsMonth == menu ? 'text-bg-light' : 'text-bg-dark' %>">
+        <%= count[menu] || 0 %>
+      </span>
+    </a>
+    <% }) %>
+  </div>
+</div>
