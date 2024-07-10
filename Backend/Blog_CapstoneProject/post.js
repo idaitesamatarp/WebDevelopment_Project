@@ -69,6 +69,31 @@ const store = (req, res) => {
   res.redirect("/post/" + months);
 };
 
+const edit = (req, res) => {
+  const thisMonth = req.params.month;
+  const id = req.params.id;
+
+  const filterData = posts.filter(
+    (item, index) => item.month == thisMonth && index == id
+  );
+
+  res.render("edit.ejs", {
+    month,
+    postsMonth: thisMonth,
+    data: filterData,
+    count: summary(posts),
+    id,
+  });
+};
+
+const update = (req, res) => {
+  var post = posts[req.body.id];
+  post.title = req.body.title;
+  post.subtitle = req.body.subtitle;
+  post.content = req.body.content;
+  res.redirect("/post/" + req.params.month);
+};
+
 const view = (req, res) => {
   const thisMonth = req.params.month;
   const id = req.params.id;
@@ -87,11 +112,25 @@ const view = (req, res) => {
   });
 };
 
+const deletes = (req, res) => {
+  const id = req.params.id;
+  const postToDelete = posts.find((item, index) => index == id);
+
+  const index = posts.indexOf(postToDelete);
+  if (index > -1) {
+    posts.splice(index, 1);
+  }
+  res.redirect("/post/" + req.params.month);
+};
+
 const post = {
   list,
   create,
   store,
   view,
+  edit,
+  update,
+  deletes,
 };
 
 export { post };
