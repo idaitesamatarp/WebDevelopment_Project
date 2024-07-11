@@ -1,0 +1,4 @@
+What is the backend ? 
+a. Server, basically just a computer it can listen for incoming requests from browsers from all over the world
+b. Application, which is all the logic that enables the web app to function determines how you want to respond to the requests from browsers
+c. Database, where you can store and retrieve user data

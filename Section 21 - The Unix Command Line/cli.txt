@@ -1,0 +1,8 @@
+installing git bash
+List files dan directories => ls
+Change directory => cd
+Make directory => mkdir
+Create a new file => touch
+Open a file => open
+Remove a file/directory => rm (*) for all, (-r) for directory
+Print working directory => pwd
