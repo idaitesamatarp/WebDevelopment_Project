@@ -1,17 +1,35 @@
-Node Read Eval Print Loop (REPL)
+# Node Read Eval Print Loop (REPL)
 - is a computer environment where user inputs are read and evaluated, and then the results are returned to the user.
 
-Working Directory (git add)
+# Working Directory (git add)
 - the directory where we initialized git, then we can push our files to a Staging Area.
 
-Staging Area (git commit)
+# Staging Area (git commit)
 - where we can pick and choose which files we want to commit. then we can commit our files or our save point to our Local Repository.
 
-Local Repository
+# Local Repository
 - once you've done a few commits, then you actually have a timeline/log of various commits and this is called a Main Branch. 
 
-Main Branch
+# Main Branch
 - your main branch of commits or save points, and it is sequential, and this is usually where your main progress is saved or commited. Later on, we then introduced this idea of Remote Repository.
 
-Remote Repository (git push)
+# Remote Repository (git push)
 - the important thing to note is that you can have a local repository completely in parallel with a remote repository check the differences between them, but you can also sync them or push things from your local repository to your remote repository. the local repository is the git file that we've got inside our Working Directory, and the remote repository is GitHub, which hosts our code and also hosts all of the changes that were made in between the different commits. and when we performed the command "git push", then that effectively pushed all of those commits, all of those various versions and changes, and code pieces to our remote repository on GitHub.
+
+# Unstage Commits in Staging Area
+- I'm going to basically undo what I've just done.
+So I'm going to remove all of these files from my Staging area and then I'm going to add them later 
+on once I've got my gitignore setup.
+Basically, we're just undoing the last step.
+To do that, I'm going to write "git rm --cached" and I'm going to use the "-r" flag for recursive
+and I'm going to use a "." (dot) to say that everything inside the current directory should be removed from
+the Staging area.
+
+# .gitignore (ignore certain file/folder to uploaded in Remote Repository)
+- Now with gitignore it has certain rules.
+So for example you can use the pound sign (#) to comment.
+So for example, you can say, you know, "#Log files," right? "To be ignored" .
+Another thing you can do is use wildcards.
+So if you use the asterisks (*) and you say *.txt, that means that when you commit your
+project, all of the files that have a .txt extension will be ignored.
+- https://github.com/github/gitignore A collection of useful .gitignore templates
