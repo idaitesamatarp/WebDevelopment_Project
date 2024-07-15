@@ -1,0 +1,17 @@
+Node Read Eval Print Loop (REPL)
+- is a computer environment where user inputs are read and evaluated, and then the results are returned to the user.
+
+Working Directory (git add)
+- the directory where we initialized git, then we can push our files to a Staging Area.
+
+Staging Area (git commit)
+- where we can pick and choose which files we want to commit. then we can commit our files or our save point to our Local Repository.
+
+Local Repository
+- once you've done a few commits, then you actually have a timeline/log of various commits and this is called a Main Branch. 
+
+Main Branch
+- your main branch of commits or save points, and it is sequential, and this is usually where your main progress is saved or commited. Later on, we then introduced this idea of Remote Repository.
+
+Remote Repository (git push)
+- the important thing to note is that you can have a local repository completely in parallel with a remote repository check the differences between them, but you can also sync them or push things from your local repository to your remote repository. the local repository is the git file that we've got inside our Working Directory, and the remote repository is GitHub, which hosts our code and also hosts all of the changes that were made in between the different commits. and when we performed the command "git push", then that effectively pushed all of those commits, all of those various versions and changes, and code pieces to our remote repository on GitHub.
