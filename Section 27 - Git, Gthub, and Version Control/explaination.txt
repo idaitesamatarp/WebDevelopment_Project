@@ -33,3 +33,37 @@ Another thing you can do is use wildcards.
 So if you use the asterisks (*) and you say *.txt, that means that when you commit your
 project, all of the files that have a .txt extension will be ignored.
 - https://github.com/github/gitignore A collection of useful .gitignore templates
+
+# Cloning Repository (git clone url)
+- cloning a remote repository on GitHub to pull it onto your local repository on your machine.
+And this is a way for you to pull down all of the versions and all of the commits of a particular remote
+repository and to store the files in your own working directory. 
+So once you've cloned a repo, you've essentially made a copy of it on your own local working environment
+and allows you to stand on the shoulders of giants and continue where they left off. So you won't need
+to clone it again during regular development.
+
+# Pull (git pull)
+- get last updated code to your local repository if someone make a changing and push to your remote reopository.
+
+# Branching (git branch name-of-branch)
+- we want to try out something different maybe build a new feature or just to mess around with a new idea or concept
+we can also create a side branch. 
+- git branch to check all branch we haved
+- git checkout name-of-branch to switch our branch
+
+# Merging (git merge name-of-branch)
+- if some point in the future that we decide that experiment is really fruitfull and great ad we'd like to merge it 
+back to the main branch that can be done simply placing a merge request. 
+
+# Optional Git Challenge : https://learngitbranching.js.org/ 
+
+# Forking
+- we're basically just copying a repository that's hosted on GitHub and we're keeping
+the copy under our own GitHub account where we can make changes to it.
+
+# Pull Request
+- if someone decides to add some features to it, maybe, you know, improve the code base or add some
+more code or do something crazy or whatever it is that they want, then committed those changes, 
+then push it to their remote repository.
+And then if they want me to incorporate those changes that they made, then their only option
+is to make a "Pull request". And it's almost like making a suggestion.
