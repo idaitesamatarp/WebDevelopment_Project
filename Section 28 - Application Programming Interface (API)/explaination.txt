@@ -1,0 +1,42 @@
+# API (Application Programming Interface)
+- it's essentially a set of rules and protocols that define how different software can interact with each other.
+
+# HTTP Protocol 
+- GET
+- POST
+- PUT
+- PATCH
+- DELETE
+
+# API Documentation
+- the collection of references, tutorials, and examples that help developers use your API
+
+# API Endpoints
+- BaseURL/Endpoint
+- the endpoint is basically a different route on the API provider server and in the documentation
+they will usually give you an example of which endpoints you can use and what is the purpose of that
+endpoint. Let's go ahead and try an exercise on Postman.
+
+# Single/Multiple Query Parameters
+- BaseURL/endpoint?query=value
+- Start query with question mark
+- simply adding an ampersand(&) after the first query (BaseURL/endpoint?query=value&query2=value)
+- use to filtering or searching
+
+# Path Parameters
+- BaseURL/endpoint/{path-parameter}
+- identifying a resource by some specific parameter
+
+# JSON
+- JavaScript Object Notation
+- JSON is a lightweight format for storing and transporting data
+- Serialization : turning JavaScript Object into a JSON (JSON.stringify)
+- Deserialization : turning back a JSON to JavaScript Object (JSON.parse)
+
+# Authentication & Authorization
+- So the difference between these two forms is if you have a user, they can authenticate themselves with your service.
+That means you are logging in or you are registering. But authorization is simply a client who is allowed to use your service with an API key that might be associated with a user, in which case they are authenticating themselves and then getting an API key to authorize themselves to use your API.
+- No Authentication
+- Basic Authentication is required for some endpoints. Use your username and password to authenticate.
+- API Key Authorization is required to Authorize certain endpoints.
+- Token Based Authorization is required for some endpoints. Use your username and password to get a token obtained
